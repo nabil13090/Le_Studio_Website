@@ -1,0 +1,409 @@
+/* ==========================================================================
+  Import CSS
+  ========================================================================== */
+/* Google Fonts Oswald & Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* ==========================================================================
+  Base
+  ========================================================================== */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+header {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* ==========================================================================
+  Custom Bootstrap
+  ========================================================================== */
+
+.w-90 {
+    width: 90%;
+}
+
+.mb-4-custom {
+    margin-bottom: 2rem;
+}
+
+.mb-6 {
+    margin-bottom: 3.75rem;
+}
+
+.my-6 {
+    margin-top: 3.75rem;
+    margin-bottom: 3.75rem;
+}
+
+.ff-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.py-custom {
+    padding-top: 1.96rem;
+    padding-bottom: 1.96rem;
+}
+
+.py-10 {
+    padding-top: 6.375rem;
+    padding-bottom: 6.375rem;
+}
+
+.bg-gold {
+    background-color: #CBAC6B;
+}
+
+.bg-goldgrey {
+    background-color: #373737;
+}
+
+.bg-lightgrey {
+    background-color: #EDEDED;
+}
+
+.bg-darkbrown {
+    background-color: #282828;
+}
+
+.bg-darkerbrown {
+    background-color: #141414;
+}
+
+.link-gold a,
+.link-hover-gold a:is(:hover, :focus, .active, .show) {
+    color: #CBAC6B !important;
+}
+
+.link-goldgrey {
+    color: #373737 !important;
+}
+
+/* Link - Text Underline Effect */
+
+.tdu-transform-scale {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.tdu-transform-scale:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid black;
+    transform: scaleX(0.22);
+    transition: transform 250ms ease-in-out;
+}
+
+.tdu-transform-scale:hover:after {
+    transform: scaleX(1);
+}
+
+.tdu-transform-scale.tdu-fromLeft:after {
+    transform-origin: left;
+}
+
+.tdu-transform-scale.tdu-white:after {
+    border-color: white;
+}
+
+/* Custom for Activ */
+.activs .tdu-transform-scale:after {
+    padding-bottom: 0.625rem;
+}
+
+.activs .tdu-transform-scale:hover:after {
+    transform: scaleX(1.6);
+}
+
+/* ==========================================================================
+  Header
+  ========================================================================== */
+
+/*
+  Navbar
+  ========================================================================== */
+
+.nav_container {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.063rem;
+}
+
+.navbar a {
+    color: #fcfcfc;
+    cursor: pointer;
+}
+
+.nav-link svg {
+    height: 1.25rem;
+}
+
+.button-hover-gold,
+.button-hover-gold:is(:hover, :focus, .active, .show),
+.navbar-gold-hover-color .nav-link:is(:hover, :focus, .active, .show) {
+    color: white;
+    background-color: #CBAC6B;
+}
+
+.dropdown-black-bg {
+    background-color: black;
+}
+
+/* Icone sélection langue */
+
+.lang {
+    height: 2.875rem;
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+
+.offcanvas.show {
+    background-color: #141414 !important;
+}
+
+/* Burger Bouton and Close - Change color and remove border */
+
+.navbar-toggler,
+.navbar-toggler:is(:focus, :active),
+.navbar-toggler-icon:focus,
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(255, 255, 255, 1)'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+
+
+/*
+  Carrousel
+  ========================================================================== */
+
+.title-custom {
+    font-weight: 500;
+    font-size: clamp(1rem, 0.7019rem + 1.2719vw, 2.5rem);
+    transform: translateX(-4vw);
+}
+
+.title-custom span {
+    display: block;
+    color: #CBAC6B;
+    font-size: clamp(1rem, 0.0064rem + 4.2395vw, 6rem);
+    transform: translateX(8vw);
+}
+
+.subtitle-custom {
+    font-size: clamp(1rem, 0.8261rem + 0.7419vw, 1.875rem);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.circle-indicators.carousel-indicators [data-bs-target].active {
+    border: 2px solid #fcfcfc;
+    background-color: transparent;
+}
+
+.circle-indicators.carousel-indicators [data-bs-target] {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fcfcfc;
+    border-radius: 50%;
+    background-color: #fcfcfc;
+    color: transparent;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption .call-to-action {
+    margin-top: 4%;
+    text-transform: uppercase;
+}
+
+/*
+  Header Background
+  ========================================================================== */
+
+header {
+    min-height: 5.625rem;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #contact header,
+    #presentation header {
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #contact header {
+        background-image: url(../assets/img/visuel/header_contact.jpg);
+    }
+    
+    #presentation header {
+        background-image: url(../assets/img/visuel/header_presentation.jpg);
+    }
+}
+
+/* ==========================================================================
+  Main
+  ========================================================================== */
+
+/* Section Title */
+
+main h2 {
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+    background: bottom center no-repeat url(../assets/img/bg_titre.jpg);
+}
+
+#contact main h2 {
+    background-position: bottom left;
+}
+
+/*
+  Activities
+  ========================================================================== */
+
+.activs div {
+    padding: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.activs div img {
+    margin-top: 5.875rem;
+    margin-bottom: 1.875rem;
+}
+
+.activs-01 {
+    background-image: url(../assets/img/activites/bg_activite_1.jpg);
+}
+
+.activs-02 {
+    background-image: url(../assets/img/activites/bg_activite_2.jpg);
+}
+
+.activs-03 {
+    background-image: url(../assets/img/activites/bg_activite_3.jpg);
+}
+
+.activs-04 {
+    background-image: url(../assets/img/activites/bg_activite_4.jpg);
+}
+
+/*
+  Presentation
+  ========================================================================== */
+
+#presentation .carousel-item {
+    height: 400px;
+}
+
+/*
+  Contact
+  ========================================================================== */
+
+#contact aside h3 {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: initial;
+    font-size: initial;
+    font-weight: 700;
+}
+
+#contact textarea {
+    height: 220px;
+}
+
+/* Fix Label on Mobile Menu */
+
+.form-floating > label {
+    z-index: 1;
+}
+
+/*
+  Google Maps
+  ========================================================================== */
+
+.gMap {
+    height: 668px;
+    background: center / cover no-repeat url(../assets/img/map.webp);
+}
+
+/* ==========================================================================
+  Footer
+  ========================================================================== */
+
+.galeriefoot {
+    height: 300px;
+}
+
+.insta-slider > div > a:hover {
+    opacity: 0.5;
+}
+
+.imgcards:hover::after{
+    content:'\f004 \A0  60 \A0 \A0 \f075 \A0 140';
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: white;
+    display: flex;
+}
+
+/* footer underline */
+
+.line::before {  
+    content:"";
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    left: -8px;
+    border-bottom: 2px solid white;
+    width: 25px;
+
+}
+
+.line:hover::before{
+border-color: #CBAC6B
+}
+
+
+@media screen and (max-width: 1530px){   
+    .galeriefoot{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 816px){
+    .galeriefoot{
+        height: 400px;
+    }
+}
